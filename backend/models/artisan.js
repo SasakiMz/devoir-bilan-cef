@@ -14,4 +14,17 @@ const Artisan = sequelize.define('Artisan', {
     timestamps : false
 });
 
+
+Artisan.associate = (models) => {
+  Artisan.belongsTo(models.Specialty, {
+    foreignKey: 'specialty_id'
+  });
+};
+
+const Specialty = require('./specialty');
+
+Artisan.belongsTo(Specialty, {
+  foreignKey: 'specialty_id'
+});
+
 module.exports = Artisan;

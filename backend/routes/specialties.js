@@ -12,4 +12,5 @@ router.get('/', async (req, res) => {
   }
 });
 
+module.exports = Specialty;
 module.exports = router;

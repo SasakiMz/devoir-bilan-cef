@@ -1,25 +1,33 @@
 const express = require('express');
 const router = express.Router();
 
+const Category = require('../models/category');
+const Specialty = require('../models/specialty');
 const Artisan = require('../models/artisan');
 
-// route /artisans + filtre
 router.get('/', async (req, res) => {
   try {
-    const { specialty } = req.query;
+    const { specialty, category } = req.query;
 
-    let artisans;
+    let where = {};
 
     if (specialty) {
-      artisans = await Artisan.findAll({
-        where: { specialty_id: specialty }
-      });
-    } else {
-      artisans = await Artisan.findAll();
+      where.specialty_id = specialty;
     }
-
+    const artisans = await Artisan.findAll({
+      where,
+        include: {
+        model: Specialty,
+        required: category ? true : false,
+        where: category ? { category_id: category } : undefined,
+        include: {
+          model: Category
+        }
+      }
+    });
     res.json(artisans);
   } catch (error) {
+    console.log(error);
     res.status(500).json({ error: 'Erreur serveur' });
   }
 });
@@ -39,4 +47,5 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+module.exports = Artisan;
 module.exports = router;

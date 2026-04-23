@@ -12,4 +12,5 @@ router.get('/', async (req, res) => {
   }
 });
 
+module.exports = Category;
 module.exports = router;

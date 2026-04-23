@@ -9,4 +9,16 @@ const Specialty = sequelize.define('Specialty', {
     timestamps: false
 });
 
+Specialty.associate = (models) => {
+  Specialty.belongsTo(models.Category, {
+    foreignKey: 'category_id'
+  });
+};
+
+const Category = require('./category');
+
+Specialty.belongsTo(Category, {
+  foreignKey: 'category_id'
+});
+
 module.exports = Specialty;
