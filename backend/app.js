@@ -23,6 +23,6 @@ app.use('/specialties', specialtiesRoutes);
 
 
 //  serveur
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log('serveur ok');
 });

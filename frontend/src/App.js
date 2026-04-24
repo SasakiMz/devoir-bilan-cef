@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+import Home from "./pages/home";
+import Artisansid from "./pages/artisansid";
+import Artisans from "./pages/artisans";
+import Erreur404 from "./pages/erreur404";
+import NavBar from "./components/navbar/NavBar";
+
+
+export default function App() {
+  return(
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/Artisans" element={<Artisans/>}/>
+        <Route path="/Artisansid" element={<Artisansid/>}/>
+        <Route path="*" element={<Erreur404/>}/>
+      </Routes>
+    </BrowserRouter>
   );
-}
-
-export default App;
+};
