@@ -31,6 +31,8 @@ function Artisanid() {
             <p>Ville : {artisan.location}</p>
             <p>Email : {artisan.email}</p>
             <p>Note : {artisan.rating}</p>
+            <p>Spécialité: {artisan.Specialty?.name}</p>
+            <p>Catéogie: {artisan.Specialty?.Category?.name}</p>
         </div>
     )
 };

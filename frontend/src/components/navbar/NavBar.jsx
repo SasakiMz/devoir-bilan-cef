@@ -1,13 +1,35 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import {Link} from "react-router-dom";
 
-const NavBar = () => {
-    <header>
-       <nav>
-            <Link to='/'> Accueil</Link>;
-            <Link to='/artisans'> Artisans</Link>;
-        </nav> 
-    </header>
-}
+function NavBar () {
+    const [categories, setCategories] = useState([]);
 
-export default NavBar
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const res = await fetch(`http://localhost:3001/categories`);
+                const data = await res.json();
+                setCategories(data);
+            } 
+            catch (err) {
+                console.error(err);
+            };
+        };
+
+        fetchCategories();
+    },[]);
+
+    return (
+        <nav>
+            <Link to="/">Accueil</Link>
+            
+            {categories.map(cat =>(
+            <Link key={cat.id} to={`/artisans?category=${cat.id}`}>
+                {cat.name}
+            </Link>
+            ))}
+        </nav>
+        );
+};
+
+export default NavBar;

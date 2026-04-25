@@ -11,9 +11,6 @@ router.get('/', async (req, res) => {
 
     let where = {};
 
-    if (specialty) {
-      where.specialty_id = specialty;
-    }
     const artisans = await Artisan.findAll({
       where,
         include: {
@@ -35,7 +32,13 @@ router.get('/', async (req, res) => {
 // route /artisans/:id
 router.get('/:id', async (req, res) => {
   try {
-    const artisan = await Artisan.findByPk(req.params.id);
+    const artisan = await Artisan.findByPk(req.params.id, {
+      include: {
+        model: Specialty,
+        include: {
+          model: Category
+        }}
+    });
 
     if (!artisan) {
       return res.status(404).json({ error: 'Artisan non trouvé' });
