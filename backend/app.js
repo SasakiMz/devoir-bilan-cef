@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require("cors");
 const sequelize = require('./config/db');
 
 const artisansRoutes = require('./routes/artisans');
@@ -15,6 +16,8 @@ sequelize.authenticate()
   .then(() => console.log('connexion DB ok'))
   .catch(err => console.error('erreur DB', err));
 
+
+app.use(cors());
 
 // Routes
 app.use('/artisans', artisansRoutes);

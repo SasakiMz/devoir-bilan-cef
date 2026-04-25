@@ -7,7 +7,7 @@ import Home from "./pages/home";
 import Artisansid from "./pages/artisansid";
 import Artisans from "./pages/artisans";
 import Erreur404 from "./pages/erreur404";
-import NavBar from "./components/navbar/NavBar";
+import NavBar from "./components/navbar/NavBar.jsx";
 
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/Artisans" element={<Artisans/>}/>
-        <Route path="/Artisansid" element={<Artisansid/>}/>
+        <Route path="/Artisans/:id" element={<Artisansid/>}/>
         <Route path="*" element={<Erreur404/>}/>
       </Routes>
     </BrowserRouter>
