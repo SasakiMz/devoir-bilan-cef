@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 import {Link} from "react-router-dom";
+import '../styles/navbar.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from '../assets/img/Logo.png';
+import loupe from '../assets/favicons/loupe.png';
+
 
 function NavBar () {
     const [categories, setCategories] = useState([]);
@@ -20,16 +25,40 @@ function NavBar () {
     },[]);
 
     return (
-        <nav>
-            <Link to="/">Accueil</Link>
+        <nav className="navbar navbar-custom navbar-expand-lg px-4">
+            <div className="bloc logo d-flex">
+                <Link className="navbar-brand fw-bold" to="/">
+                    <img src={logo} className="navbar-logo" alt="Logo trouve ton artisan" />
+                </Link>
+            </div>
             
-            {categories.map(cat =>(
-            <Link key={cat.id} to={`/artisans?category=${cat.id}`}>
-                {cat.name}
-            </Link>
-            ))}
+
+            {/* BURGER MOBILE */}
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span className="navbar-toggler-icon"></span>
+            </button>
+
+            {/* MENU */}
+            <div className="navbar-font d-flex collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav mx-auto gap-3">
+                    {/* CATÉGORIES DYNAMIQUES */}
+                    {categories.map(cat => (
+                    <li className="nav-item mx-4" key={cat.id}>
+                        <Link className="nav-link" to={`/artisans?category=${cat.id}`}>
+                            {cat.name}
+                        </Link>
+                    </li>
+                    ))}
+                </ul>
+            </div>
+            <form className="searchbar d-flex">
+                <input className="form-control me-2" type="search" placeholder="Rechercher"/>
+                <Link to="/">
+                    <img src={loupe} alt="retour à l'accueil, une loupe" />
+                </Link>
+            </form>
         </nav>
-        );
+);
 };
 
 export default NavBar;

@@ -1,0 +1,30 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+.navbar-custom {
+    background-color: #F1F8FC;
+};
+
+.navbar-custom .form-control {
+    border: 2px solid #0074C7;
+    width: 200px;
+    height: 25px;
+    border-radius: 8px
+};
+
+
+.navbar-logo {
+  height: 100px;
+  object-fit: contain;
+  padding-left: 80px;
+};
+
+.navbar-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+};
+
+
+// .searchbar {
+//     margin-right: 200px;
+// }
