@@ -1,0 +1,47 @@
+.trouveartisan {
+    background-color: #0074C7;
+}
+;
+.btn-hometopmain {
+    background-color: #82B864;
+    box-shadow: 0 4px 10px rgba(0,0,0,0);
+    border: 0;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+}
+
+.commentmarche {
+    background-color: #F1F8FC;
+}
+
+.card-artisan {
+  background-color: #cfd6dc;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.artisan-img {
+  width: 100px;
+  height: 100px;
+  background: #e5ebf0;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.artisan-info {
+  h5 {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .rating {
+    color: yellow;
+  }
+
+  p {
+    margin: 0;
+  }
+}
