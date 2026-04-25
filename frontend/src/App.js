@@ -7,7 +7,7 @@ import Home from "./pages/home";
 import Artisansid from "./pages/artisansid";
 import Artisans from "./pages/artisans";
 import Erreur404 from "./pages/erreur404";
-import NavBar from "./components/navbar/NavBar.jsx";
+import NavBar from "./components/NavBar.jsx";
 
 
 export default function App() {
