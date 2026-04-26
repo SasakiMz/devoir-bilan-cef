@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import "../styles/home.scss";
-import "../styles/cards.scss";
+import "../styles/cardshome.scss";
 
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
             </div>
             <div className="commentmarche">
                 <h2 className ="py-3 text-center">Comment ça marche ?</h2>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center mt-4">
                     <div class="card card-size-home d-flex m-2 ">
                         <div class="card-body card-home-marcheblue">
                             <h5 class="card-title text-center">1.</h5>
@@ -54,33 +54,25 @@ const Home = () => {
                             <h5 class="card-title text-center">4.</h5>
                             <p class="card-text text-center">Une réponse sera apportée sous 48h</p>
                         </div>
-                </div>
+                    </div>
                 </div>
             </div>
-            <div>
-                <div>
+            <div className="container">
                     <h3 className ="text-center">Artisans du mois ! </h3>
                         <p className ="text-center">Voici les 3 artisans du mois, sélectionnés et mieux noté par la communauté !</p>
-                        <div className="row justify-content-center">
+                        <div className="row justify-content-center ">
                             {topArtisans .sort((a, b)=> b.rating - a.rating) .slice(0,3) .map(a =>
                             <div key={a.id} className="card col-3 card-artisan container">
-                                <div className="row">
-                                    <div className="favicon-artisan col">
-                                        <img src="/" alt="artisan" className="artisan-img"/>
-                                    </div>
-                                    <div className="artisan col">
-                                        <h5>{a.name}</h5>
-                                        <div className="rating">★ ★ ★ ★ ★</div>
-                                        <p className="job">{a.specialty?.name}</p>
-                                        <p className="category">{a.specialty?.Category?.name}</p>
-                                        <p className="location">{a.location}</p>
-                                        <button className="btn-artisan-card pbtncard">Contactez le</button>
-                                    </div> 
+                                <div className="card-artisan d-flex flex-column">
+                                    <h5>{a.name}</h5>
+                                    <div className="rating fs-4">★ ★ ★ ★ ★</div>
+                                    <p className="job">{a.Specialty?.name}</p>
+                                    <p className="category">{a.Specialty?.Category?.name}</p>
+                                    <p className="location">{a.location}</p>
+                                    <button className="btn-artisan-card align-self-end"> Contactez le !</button>
                                 </div>
                             </div>)}
                         </div> 
-                </div>
-               
             </div>
         </div>
     )

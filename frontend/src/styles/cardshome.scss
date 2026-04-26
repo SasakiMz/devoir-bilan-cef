@@ -10,9 +10,19 @@
     background-color:#CD2C2E;
 };
 
+
 .card-size-home {
-    width: 300px;
-}; 
+  width: 260px;
+  height: 130px;
+  border-radius: 12px;
+}
+
+.card-size-home .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 //Card artisan page home
 
@@ -22,7 +32,6 @@
   padding:       20px;
   margin-top:   20px ;
   margin-bottom: 20px;
-  
 };
 
 .btn-artisan-card {
@@ -42,6 +51,7 @@
     margin-left: 20px;
     margin-right: 40px;
 }
+
 .rating {
     color: yellow;
 }
