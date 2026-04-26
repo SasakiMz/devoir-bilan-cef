@@ -49,7 +49,7 @@ function Artisanid() {
                             <label for="mail">objet<input type="object" id="object" name="object" /></label>
                         </li>
                         <li>
-                            <label for="msg">Message&nbsp;:<textarea id="msg" name="user_message"></textarea></label> 
+                            <label for="msg">Message<textarea id="msg" name="user_message"></textarea></label> 
                         </li>
                     </ul>
                     <button>Envoyer le message</button>

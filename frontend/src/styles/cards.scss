@@ -1,0 +1,51 @@
+@import "bootstrap";
+
+.card-home-marchegreen {
+    background-color:#82B864;
+};
+.card-home-marcheblue {
+    background-color:#0074C7;
+}
+.card-home-marchered {
+    background-color:#CD2C2E;
+};
+
+.card-size-home {
+    width: 300px;
+}; 
+
+//Card artisan page home
+
+.card.card-artisan {
+  background-color: #F1F8FC; 
+  border-radius: 20px;
+  padding:       20px;
+  margin-top:   20px ;
+  margin-bottom: 20px;
+  
+};
+
+.btn-artisan-card {
+    background-color: #82B864;
+    box-shadow: 0 4px 10px rgba(0,0,0,0);
+    border: 0px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 16px;
+};
+
+.favicon-artisan {
+    background-color: #384050;
+    opacity: 0.9;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+.rating {
+    color: yellow;
+}
+
+.location {
+    margin-bottom: 10px;
+}

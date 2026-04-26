@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-import "../styles/home.scss"
+import "../styles/home.scss";
+import "../styles/cards.scss";
 
 
 const Home = () => {
@@ -29,31 +30,58 @@ const Home = () => {
             </div>
             <div className="commentmarche">
                 <h2 className ="py-3 text-center">Comment ça marche ?</h2>
-                <p>1. Choisissez votre catégorie d’artisan </p>
-                <p>2. Choisissez votre artisan </p>
-                <p>3. Le contacter via formulaire </p>
-                <p>4. Une réponse sera apportée sous 48h </p>
-            </div>
-            {/* <div>
-                <h3 className ="text-center">Artisans du mois ! </h3>
-                <p className ="text-center">Voici les 3 artisans du mois, sélectionnés et mieux noté par la communauté !</p>
-                {topArtisans
-                .sort((a, b)=> b.rating - a.rating)
-                .slice(0,3)
-                .map(a =>
-                    <div key={a.id} className="card-artisan">
-                        <img src="/" alt="artisan" className="artisan-img"/>
-                        <div className="artisan">
-                            <h5>{a.name}</h5>
-                            <div className="rating">★★★★★</div>
+                <div className="d-flex justify-content-center">
+                    <div class="card card-size-home d-flex m-2 ">
+                        <div class="card-body card-home-marcheblue">
+                            <h5 class="card-title text-center">1.</h5>
+                            <p class="card-text text-center">Choisissez votre catégorie d’artisan</p>
                         </div>
-                        <p className="job">{a.specialty?.name}</p>
-                        <p className="category">{a.specialty?.Category?.name}</p>
-                        <p className="location">{a.location}</p>
-                        <button className="btn-artisan">Contactez le</button>
                     </div>
-                 )}
-            </div> */}
+                    <div class="card card-size-home d-flex m-2">
+                        <div class="card-body card-home-marcheblue">
+                            <h5 class="card-title text-center">2.</h5>
+                            <p class="card-text text-center">Choisissez votre artisan </p>
+                        </div>
+                    </div>
+                    <div class="card card-size-home d-flex m-2">
+                        <div class="card-body card-home-marchered">
+                            <h5 class="card-title text-center">3.</h5>
+                            <p class="card-text text-center">Le contacter via formulaire</p>
+                        </div>
+                    </div>
+                    <div class="card card-size-home d-flex m-2">
+                        <div class="card-body card-home-marchegreen">
+                            <h5 class="card-title text-center">4.</h5>
+                            <p class="card-text text-center">Une réponse sera apportée sous 48h</p>
+                        </div>
+                </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3 className ="text-center">Artisans du mois ! </h3>
+                        <p className ="text-center">Voici les 3 artisans du mois, sélectionnés et mieux noté par la communauté !</p>
+                        <div className="row justify-content-center">
+                            {topArtisans .sort((a, b)=> b.rating - a.rating) .slice(0,3) .map(a =>
+                            <div key={a.id} className="card col-3 card-artisan container">
+                                <div className="row">
+                                    <div className="favicon-artisan col">
+                                        <img src="/" alt="artisan" className="artisan-img"/>
+                                    </div>
+                                    <div className="artisan col">
+                                        <h5>{a.name}</h5>
+                                        <div className="rating">★ ★ ★ ★ ★</div>
+                                        <p className="job">{a.specialty?.name}</p>
+                                        <p className="category">{a.specialty?.Category?.name}</p>
+                                        <p className="location">{a.location}</p>
+                                        <button className="btn-artisan-card pbtncard">Contactez le</button>
+                                    </div> 
+                                </div>
+                            </div>)}
+                        </div> 
+                </div>
+               
+            </div>
         </div>
     )
 }
