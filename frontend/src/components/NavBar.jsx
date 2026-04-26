@@ -31,13 +31,10 @@ function NavBar () {
                     <img src={logo} className="navbar-logo" alt="Logo trouve ton artisan" />
                 </Link>
             </div>
-            
-
             {/* BURGER MOBILE */}
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
             </button>
-
             {/* MENU */}
             <div className="navbar-font d-flex collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav mx-auto gap-3">

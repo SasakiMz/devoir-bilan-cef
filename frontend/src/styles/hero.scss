@@ -1,1 +1,41 @@
 @import "bootstrap";
+
+.hero-header {
+    background-color: #0074C7;
+    color: white;
+    height: 150px;
+}
+
+h1 {
+    font-size: 2vh;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating {
+    color: yellow;
+    
+  }
+
+.rating-value {
+  font-size: 0.95rem;
+}
+
+.badge-artisan {
+  background: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.cardhero {
+  background: #F1F8FC;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: -40px;
+}

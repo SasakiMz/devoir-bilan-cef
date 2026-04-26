@@ -29,62 +29,74 @@ function Artisanid() {
 
     return (
         <div>
-            <div className="hero-header">
+            <div className="hero-header text-center">
                 <h1>{artisan.name}</h1>
-                <div className="rating fs-4">★ ★ ★ ★ ★</div>
-                <div>{artisan.rating}</div>
+                <div className="rating-container">
+                    <div className="rating">★ ★ ★ ★ ★</div>
+                    <span className="rating-value">{artisan.rating}/5</span>
+                </div>
             </div>
-            <div className="cardhero">
-                <img src="" alt="" />
-                <h3>{artisan.name}</h3>
-                <p>Spécialité: {artisan.Specialty?.name}</p>
-                <p>Ville : {artisan.location}</p>
-                <p>12 34 56 78 90 10</p>
+
+            <div className="container">
+                <div className="cardhero shadow d-flex justify-content-between align-items-center">
+                <div>
+                    <h5>{artisan?.name}</h5>
+                    <div className="mt-2">
+                        <span className="badge-artisan">{artisan?.Specialty?.Category?.name}</span>
+                        <span className="badge-artisan">{artisan?.Specialty?.name}</span>
+                        <span className="badge-artisan">{artisan?.location}</span>
+                    </div>
+                </div>
+                    <div className="text-end mt-3">
+                        <p className="mb-2">{artisan?.email}</p>
+                        <button className="btnartisansid">Contacter</button>
+                    </div>
+                </div>
             </div>
-            
-            <div className="container">  
+            <div className="container my-4">  
                 <div className="row align-items-stretch ">
                      <div className="col-6">
                             <h2 className="mb-3">Envoyer un message</h2>
-                            <div className="card h-100 d-flex flex-column p-4 shadow">
+                            <div className="card card-bas h-100 d-flex flex-column p-4 shadow">
                                 <form action="#" method="post">
                                     <div className="row mb-3">
                                         <div className="col">
-                                            <input type="email" className="form-control" placeholder="Email" />
+                                            <input type="email" className="form-control shadow" placeholder="Email" />
                                         </div>
                                         <div className="col">
-                                            <input type="text" className="form-control" placeholder="Nom" />
+                                            <input type="text" className="form-control shadow" placeholder="Nom" />
                                         </div>
                                     </div>
                                     <div className="mb-3">
-                                        <input type="text" className="form-control" placeholder="Objet" />
+                                        <input type="text" className="form-control shadow" placeholder="Objet" />
                                     </div>
                                     <div className="mb-3">
-                                        <textarea className="form-control" rows="4" placeholder="Message"></textarea>
+                                        <textarea className="form-control shadow" rows="12" placeholder="Message"></textarea>
                                     </div>
-                                    <button className="btnartisansid">
+                                    
+                                </form>
+                                <button className="mt-auto align-self-center btnartisansid shadow">
                                         Envoyer le message
                                     </button>
-                                </form>
                             </div>
                         </div>
-                    <div className="col Apropos">
+                    <div className="col">
                         <h2 className="mb-3">A propos</h2>
-                        <div className="card h-100 d-flex flex-column p-4 shadow">
+                        <div className="card card-bas h-100 d-flex flex-column p-4 shadow">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas necessitatibus sapiente aut. Mollitia quis ab quae id eum. Tempora sint incidunt enim eos, harum quae soluta mollitia recusandae nobis quis. </p>
-                            <h3 className="mt-3">Prestations proposées</h3>
+                            <h3 className="mt-3 mb-4 séparateur">Prestations proposées</h3>
                             <ul>
-                                <li>
+                                <li className="my-1">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio saepe et blanditiis deserunt illum magni sequi omnis aspernatur amet possimus cum similique sapiente fugit dolore, unde voluptates, quaerat, explicabo perspiciatis!
                                 </li>
-                                <li>
+                                <li className="my-1">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, ad tempora! Accusantium quos animi velit id ab, distinctio, dolore quisquam in culpa ea beatae iste molestias saepe blanditiis. Accusamus, beatae.
                                 </li>
-                                <li>
+                                <li className="">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatum non animi expedita ea minus dolor a, obcaecati eum distinctio commodi culpa ipsam ratione dolores voluptates enim odit ex fugit.
                                 </li>
                             </ul>
-                            <button className="btnartisansid">Site de l'artisan</button>
+                            <button className="btnartisansid mt-auto align-self-center shadow">Site de l'artisan</button>
                         </div>
                     </div>
                 </div>

@@ -32,27 +32,27 @@ const Home = () => {
                 <h2 className ="py-3 text-center">Comment ça marche ?</h2>
                 <div className="d-flex justify-content-center mt-4">
                     <div class="card card-size-home d-flex m-2 ">
-                        <div class="card-body card-home-marcheblue">
-                            <h5 class="card-title text-center">1.</h5>
-                            <p class="card-text text-center">Choisissez votre catégorie d’artisan</p>
+                        <div className="card-body card-home-marcheblue">
+                            <h5 className="card-title text-center">1.</h5>
+                            <p className="card-text text-center">Choisissez votre catégorie d’artisan</p>
                         </div>
                     </div>
-                    <div class="card card-size-home d-flex m-2">
-                        <div class="card-body card-home-marcheblue">
-                            <h5 class="card-title text-center">2.</h5>
-                            <p class="card-text text-center">Choisissez votre artisan </p>
+                    <div className="card card-size-home d-flex m-2">
+                        <div className="card-body card-home-marcheblue">
+                            <h5 className="card-title text-center">2.</h5>
+                            <p className="card-text text-center">Choisissez votre artisan </p>
                         </div>
                     </div>
-                    <div class="card card-size-home d-flex m-2">
-                        <div class="card-body card-home-marchered">
-                            <h5 class="card-title text-center">3.</h5>
-                            <p class="card-text text-center">Le contacter via formulaire</p>
+                    <div className="card card-size-home d-flex m-2">
+                        <div className="card-body card-home-marchered">
+                            <h5 className="card-title text-center">3.</h5>
+                            <p className="card-text text-center">Le contacter via formulaire</p>
                         </div>
                     </div>
-                    <div class="card card-size-home d-flex m-2">
-                        <div class="card-body card-home-marchegreen">
-                            <h5 class="card-title text-center">4.</h5>
-                            <p class="card-text text-center">Une réponse sera apportée sous 48h</p>
+                    <div className="card card-size-home d-flex m-2">
+                        <div className="card-body card-home-marchegreen">
+                            <h5 className="card-title text-center">4.</h5>
+                            <p className="card-text text-center">Une réponse sera apportée sous 48h</p>
                         </div>
                     </div>
                 </div>
