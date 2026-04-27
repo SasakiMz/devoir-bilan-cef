@@ -36,7 +36,7 @@ function Artisans() {
         <div className="container mt-4">
           <div className="row g-4">
             {artisans.map(a => (
-              <div key={a.id} className="col-4">
+              <div key={a.id} className="col-12 col-md-6 col-lg-4">
                 <div className="card card-artisan p-3 h-100">
                   <h5>{a.name}</h5>
                   <div className="rating fs-5">★ ★ ★ ★ ★</div>

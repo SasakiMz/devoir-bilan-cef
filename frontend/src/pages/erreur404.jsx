@@ -7,15 +7,15 @@ const Erreur404 = () => {
     return (
         <div>
             <div className="headerbleu"></div>
-            <div className="d-flex main-pageerror">
-                <div className="col text-center">
+            <div className=" main-pageerror row align-items-center">
+                <div className="col-12 col-md-6 mb-4 mb-md-0 text-center">
                     <h1>Navré</h1>
                     <p>Mais nous n'avons pas pu trouver cette page...</p>
                     <p>Elle a du être supprimée ou déplacée</p>
-                    <button className="btn-error"><Link className="link-btn">Retour à l'accueil</Link></button>
+                    <button className="btn-error"><Link to="/" className="link-btn">Retour à l'accueil</Link></button>
                 </div>
-                <div className="col">
-                    <img src={erreur404} alt="Erreur 404"/>
+                <div className="col-12 col-md-6 text-center">
+                    <img src={erreur404} alt="Erreur 404" className="img-fluid"/>
                 </div>
             </div>
         </div>

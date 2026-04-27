@@ -41,7 +41,7 @@ function NavBar () {
                     {/* CATÉGORIES DYNAMIQUES */}
                     {categories.map(cat => (
                     <li className="nav-item mx-lg-4" key={cat.id}>
-                        <Link className="nav-link" to={`/artisans?category=${cat.id}`} data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <Link to={`/artisans?category=${cat.id}`} className="nav-link">
                             {cat.name}
                         </Link>
                     </li>
