@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import '../styles/navbar.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../assets/img/Logo.png';
-import loupe from '../assets/favicons/loupe.png';
+import loupe from '../assets/img/loupe.png';
 
 
 function NavBar () {
@@ -20,14 +20,13 @@ function NavBar () {
                 console.error(err);
             };
         };
-
         fetchCategories();
     },[]);
 
     return (
         <nav className="navbar navbar-custom navbar-expand-lg">
             <div className=" ">
-                <Link className="navbar-brand fw-bold" to="/">
+                <Link className="navbar-brand" to="/">
                     <img src={logo} className="navbar-logo" alt="Logo trouve ton artisan" />
                 </Link>
             </div>
@@ -51,7 +50,7 @@ function NavBar () {
             <form className="d-none searchbar d-lg-flex">
                 <input className="form-control me-2" type="search" placeholder="Rechercher"/>
                 <Link to="/">
-                    <img src={loupe} alt="retour à l'accueil, une loupe" />
+                    <img src={loupe} alt="Loupe, icône recherche"/>
                 </Link>
             </form>
         </nav>

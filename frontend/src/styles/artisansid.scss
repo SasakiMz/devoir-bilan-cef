@@ -10,7 +10,10 @@
     border-radius: 8px;
     color: white
 };
-
+.btnartisansid:hover {
+  background-color: #6fa653;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
 .séparateur {
   display: flex;
   align-items: center;

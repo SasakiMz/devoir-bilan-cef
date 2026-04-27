@@ -26,35 +26,32 @@ const Home = () => {
     return (
         <div>
             <div className="trouveartisan py-4">
-                <h1 className ="text-center">Trouvez son Artisan facilement</h1>
-                <p className ="text-center">découvrez un réseau d'artisans profesionnels de la région !</p>
+                <h1 className ="text-center text-white">Trouvez son Artisan facilement</h1>
+                <p className ="text-center text-white">découvrez un réseau d'artisans profesionnels de la région !</p>
                 <p className ="text-center"><button className="btn-hometopmain shadow">Découvrir les artisans</button></p>
             </div>
+            {/* Cards désignant les étapes de recherche d'un artisan */}
             <div className="commentmarche">
                 <h2 className ="py-3 text-center">Comment ça marche ?</h2>
                 <div className="d-flex justify-content-center mt-4 flex-wrap">
-                    
                     <div class="card card-size-home shadow d-flex m-2 ">
                         <div className="card-body card-home-marcheblue">
                             <h5 className="card-title text-center">1.</h5>
                             <p className="card-text text-center">Choisissez votre catégorie d’artisan</p>
                         </div>
                     </div>
-
                     <div className="card card-size-home shadow d-flex m-2">
                         <div className="card-body card-home-marcheblue">
                             <h5 className="card-title text-center">2.</h5>
                             <p className="card-text text-center">Choisissez votre artisan </p>
                         </div>
                     </div>
-
                     <div className="card card-size-home shadow d-flex m-2">
                         <div className="card-body card-home-marchered">
                             <h5 className="card-title text-center">3.</h5>
                             <p className="card-text text-center">Le contacter via formulaire</p>
                         </div>
                     </div>
-                    
                     <div className="card card-size-home shadow d-flex m-2">
                         <div className="card-body card-home-marchegreen">
                             <h5 className="card-title text-center">4.</h5>
@@ -63,6 +60,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            {/* Cards désignan les 3 meilleurs artisans du mois */}
             <div className="container">
                 <h3 className ="text-center">Artisans du mois ! </h3>
                 <p className ="text-center">Voici les 3 artisans du mois, sélectionnés et mieux noté par la communauté !</p>
@@ -78,7 +76,7 @@ const Home = () => {
                             <button className="btn-artisan-card align-self-end"> Contactez le !</button>
                         </div>
                     </div>)}
-                </div> 
+                </div>
             </div>
         </div>
     )

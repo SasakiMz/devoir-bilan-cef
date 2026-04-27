@@ -33,6 +33,7 @@ function Artisanid() {
 
     return (
         <div>
+            {/* Gros header bleu avec nom de l'artisan */}
             <div className="hero-header text-center">
                 <h1 className="pt-3">{artisan.name}</h1>
                 <div className="rating-container">
@@ -40,13 +41,12 @@ function Artisanid() {
                     <span className="rating-value">{artisan.rating}/5</span>
                 </div>
             </div>
-
+            {/* Card plus grosse et précise de l'artisan */}
             <div className="container">
                 <div className="cardhero shadow d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
                 <div>
                     <h5 className="mb-4">{artisan?.name}</h5>
                     <div className="mt-2">
-                        <span className="badge-artisan">{artisan?.Specialty?.Category?.name}</span>
                         <span className="badge-artisan">{artisan?.Specialty?.name}</span>
                         <span className="badge-artisan">{artisan?.location}</span>
                     </div>
@@ -60,6 +60,7 @@ function Artisanid() {
             <div className="container my-4">  
                 <div className="row align-items-stretch">
                      <div className="col-12 col-md-6 d-flex flex-column mt-2">
+                        {/* Formulaire de contact */}
                         <h2 className="mb-3">Envoyer un message</h2>
                         <div className="card card-bas h-100 d-flex flex-column p-4 shadow">
                             <form action="#" method="post">
@@ -82,6 +83,7 @@ function Artisanid() {
                             </button>
                         </div>
                     </div>
+                    {/* Prestations/A propos de l'artisan */}
                     <div className="col-12 col-md-6 d-flex flex-column mt-2">
                         <h2 className="mb-3">A propos</h2>
                         <div className="card card-bas h-100 d-flex flex-column p-4 shadow">
