@@ -6,7 +6,9 @@ import "../styles/cardshome.scss";
 
 const Home = () => {
     const [topArtisans, setTopArtisans] = useState([]);
-
+    useEffect(() => {
+        document.title = "Trouve ton artisan - Accueil";
+    }, []);
     useEffect(() => {
     const fetchTop = async () => {
       try {

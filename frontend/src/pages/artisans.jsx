@@ -20,7 +20,7 @@ function Artisans() {
     if (category) {
       url += `?category=${category}`;
     }
-
+    
     fetch(url)
       .then(res => res.json())
       .then(data => setArtisans(data))
