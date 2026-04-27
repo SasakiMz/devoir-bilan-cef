@@ -12,6 +12,9 @@ function Artisans() {
   const [artisans, setArtisans] = useState([]);
 
   useEffect(() => {
+    document.title = `Artisans ${category} - Trouve ton artisan`;
+  }, [category]);
+  useEffect(() => {
     let url = "http://localhost:3001/artisans";
 
     if (category) {

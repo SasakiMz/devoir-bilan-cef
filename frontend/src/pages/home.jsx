@@ -64,9 +64,9 @@ const Home = () => {
             <div className="container">
                 <h3 className ="text-center">Artisans du mois ! </h3>
                 <p className ="text-center">Voici les 3 artisans du mois, sélectionnés et mieux noté par la communauté !</p>
-                <div className="d-flex justify-content-center flex-wrap ">
+                <div className="row justify-content-center mx-1">
                     {topArtisans .sort((a, b)=> b.rating - a.rating) .slice(0,3) .map(a =>
-                    <div key={a.id} className="card col-lg-3 card-artisan container shadow">
+                    <div key={a.id} className="card col-12 col-md-3 mb-4 card-artisan container shadow">
                         <div className="card-artisan d-flex flex-column">
                             <h5>{a.name}</h5>
                             <div className="rating fs-4">★ ★ ★ ★ ★</div>

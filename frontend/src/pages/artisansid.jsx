@@ -8,7 +8,11 @@ function Artisanid() {
 
     const { id } = useParams();
     const [ artisan, setArtisan ] = useState(null);
-
+    useEffect(() => {
+        if (artisan) {
+            document.title = `${artisan.name} - Artisan à ${artisan.location}`;
+            }
+        }, [artisan]);
 
     useEffect(() => {
         console.log("ID:", id);
