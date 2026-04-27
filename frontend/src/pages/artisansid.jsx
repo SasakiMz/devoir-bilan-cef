@@ -30,7 +30,7 @@ function Artisanid() {
     return (
         <div>
             <div className="hero-header text-center">
-                <h1>{artisan.name}</h1>
+                <h1 className="pt-3">{artisan.name}</h1>
                 <div className="rating-container">
                     <div className="rating">★ ★ ★ ★ ★</div>
                     <span className="rating-value">{artisan.rating}/5</span>
@@ -40,7 +40,7 @@ function Artisanid() {
             <div className="container">
                 <div className="cardhero shadow d-flex justify-content-between align-items-center">
                 <div>
-                    <h5>{artisan?.name}</h5>
+                    <h5 className="mb-4">{artisan?.name}</h5>
                     <div className="mt-2">
                         <span className="badge-artisan">{artisan?.Specialty?.Category?.name}</span>
                         <span className="badge-artisan">{artisan?.Specialty?.name}</span>
@@ -48,7 +48,7 @@ function Artisanid() {
                     </div>
                 </div>
                     <div className="text-end mt-3">
-                        <p className="mb-2">{artisan?.email}</p>
+                        <p className="mb-4">{artisan?.email}</p>
                         <button className="btnartisansid">Contacter</button>
                     </div>
                 </div>
@@ -56,30 +56,28 @@ function Artisanid() {
             <div className="container my-4">  
                 <div className="row align-items-stretch ">
                      <div className="col-6">
-                            <h2 className="mb-3">Envoyer un message</h2>
-                            <div className="card card-bas h-100 d-flex flex-column p-4 shadow">
-                                <form action="#" method="post">
-                                    <div className="row mb-3">
-                                        <div className="col">
-                                            <input type="email" className="form-control shadow" placeholder="Email" />
-                                        </div>
-                                        <div className="col">
-                                            <input type="text" className="form-control shadow" placeholder="Nom" />
-                                        </div>
+                        <h2 className="mb-3">Envoyer un message</h2>
+                        <div className="card card-bas h-100 d-flex flex-column p-4 shadow">
+                            <form action="#" method="post">
+                                <div className="row mb-3">
+                                    <div className="col">
+                                        <input type="email" className="form-control shadow" placeholder="Email" />
                                     </div>
-                                    <div className="mb-3">
-                                        <input type="text" className="form-control shadow" placeholder="Objet" />
+                                    <div className="col">
+                                        <input type="text" className="form-control shadow" placeholder="Nom" />
                                     </div>
-                                    <div className="mb-3">
-                                        <textarea className="form-control shadow" rows="12" placeholder="Message"></textarea>
-                                    </div>
-                                    
-                                </form>
-                                <button className="mt-auto align-self-center btnartisansid shadow">
-                                        Envoyer le message
-                                    </button>
-                            </div>
+                                </div>
+                                <div className="mb-3">
+                                    <input type="text" className="form-control shadow" placeholder="Objet" />
+                                </div>                                    <div className="mb-3">
+                                      <textarea className="form-control shadow" rows="12" placeholder="Message"></textarea>
+                                </div>
+                            </form>
+                            <button className="mt-auto align-self-center btnartisansid shadow">
+                                Envoyer le message
+                            </button>
                         </div>
+                    </div>
                     <div className="col">
                         <h2 className="mb-3">A propos</h2>
                         <div className="card card-bas h-100 d-flex flex-column p-4 shadow">

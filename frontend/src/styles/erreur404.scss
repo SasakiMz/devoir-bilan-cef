@@ -1,0 +1,26 @@
+@import "bootstrap";
+
+.headerbleu{
+    background-color: #0074C7;
+    height: 30px;
+}
+
+.main-pageerror {
+    background-color: rgba(0, 116, 199, 0.14);
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.btn-error {
+    background-color: #82B864;
+    box-shadow: 0 4px 10px rgba(0,0,0,0);
+    border: 0;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+}
+
+.link-btn {
+    text-decoration: none;
+    color: white;
+}
